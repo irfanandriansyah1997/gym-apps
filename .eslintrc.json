@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": ["simple-import-sort", "sort-destructure-keys", "sort-keys"],
+  "rules": {
+    "no-undef": 2,
+    "no-unused-vars": 2,
+    "react/display-name": [0],
+    "react/prop-types": [0],
+    "simple-import-sort/imports": [
+      2,
+      {
+        "groups": [
+          ["^@?\\w"],
+          ["@/app", "@/modules", "@/repository"],
+          ["@/components", "@/hooks"],
+          ["@/utils", "@/constant", "@/mocks"],
+          [
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$"
+          ]
+        ]
+      }
+    ],
+    "sort-destructure-keys/sort-destructure-keys": 2,
+    "sort-keys": 0,
+    "sort-keys/sort-keys-fix": 2
+  }
+}
