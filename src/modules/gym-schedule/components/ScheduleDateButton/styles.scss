@@ -1,0 +1,19 @@
+.schedule-date-button {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 12px;
+
+  &[data-options-active="true"] {
+    background-color: var(--primary);
+  }
+
+  &[data-options-layout="desktop"] {
+    height: 100px;
+  }
+}
