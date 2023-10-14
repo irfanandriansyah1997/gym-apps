@@ -1,7 +1,6 @@
 import Head from "next/head";
 
 import GymScheduleModules from "@/modules/gym-schedule";
-import { fetchGymScheduleAPI } from "@/repository/gym-schedule/fetchGymScheduleAPI";
 
 import { getDateCurrentWeek } from "@/utils/date";
 import { normalizeLayout } from "@/utils/normalizer";
@@ -14,10 +13,6 @@ const currentWeekDateRange = getDateCurrentWeek();
 const HomepageRouting = async (props: PageProps) => {
   const { searchParams = {} } = props;
   const viewport: LayoutType = normalizeLayout(searchParams?.viewport);
-  const { result: { schedule = [] } = {} } = await fetchGymScheduleAPI({
-    category: GymCategoryEnum.ALL,
-    dateRange: currentWeekDateRange,
-  });
 
   return (
     <div>
@@ -26,7 +21,7 @@ const HomepageRouting = async (props: PageProps) => {
       </Head>
       <GymScheduleModules
         layout={viewport}
-        schedule={schedule}
+        schedule={[]}
         filter={{
           category: GymCategoryEnum.ALL,
           dateRange: currentWeekDateRange,

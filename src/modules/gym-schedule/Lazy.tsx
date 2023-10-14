@@ -1,10 +1,7 @@
 import dynamic from "next/dynamic";
 
 const GymScheduleDesktopLazy = dynamic(
-  () =>
-    import(
-      /* webpackChunkName: "gym-schedule-desktop" */ "./GymScheduleDesktop"
-    ),
+  () => import(/* webpackChunkName: "gym-schedule" */ "./GymScheduleModules"),
   {
     ssr: false,
   }
