@@ -2,7 +2,7 @@ import parse from "date-fns/parse";
 
 import type { GymScheduleContractAPIType } from "@/repository/gym-schedule/types/gym-schedule-contract";
 
-import { getDateListWithinWeek } from "@/utils/date";
+import { getCurrentDate, getDateListWithinWeek } from "@/utils/date";
 import {
   normalizeGymCategory,
   normalizeGymDifficulty,
@@ -100,7 +100,7 @@ export const normalizeGymSchedule = (
 
       if (formattedGymSchedule) {
         const formattedDate = new Date(
-          parse(currentKey, "yyyyMMdd", new Date()).toDateString()
+          parse(currentKey, "yyyyMMdd", getCurrentDate()).toDateString()
         );
         result.push({
           class: formattedGymSchedule,
