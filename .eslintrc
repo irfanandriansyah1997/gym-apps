@@ -3,12 +3,25 @@
     "next/core-web-vitals",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:typescript-sort-keys/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["simple-import-sort", "sort-destructure-keys", "sort-keys"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "simple-import-sort",
+    "sort-destructure-keys",
+    "sort-keys",
+    "typescript-sort-keys",
+    "@typescript-eslint"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
   "rules": {
+    "@typescript-eslint/consistent-type-exports": "error",
+    "@typescript-eslint/consistent-type-imports": "error",
     "no-undef": 2,
-    "no-unused-vars": 2,
     "react/display-name": [0],
     "react/prop-types": [0],
     "simple-import-sort/imports": [
@@ -18,7 +31,7 @@
           ["^@?\\w"],
           ["@/app", "@/modules", "@/repository"],
           ["@/components", "@/hooks"],
-          ["@/utils", "@/constant", "@/mocks"],
+          ["@/utils", "@/constant", "@/mocks", "@/model", "@/types"],
           [
             "^\\.\\.(?!/?$)",
             "^\\.\\./?$",
@@ -32,5 +45,8 @@
     "sort-destructure-keys/sort-destructure-keys": 2,
     "sort-keys": 0,
     "sort-keys/sort-keys-fix": 2
+  },
+  "globals": {
+    "JSX": true
   }
 }

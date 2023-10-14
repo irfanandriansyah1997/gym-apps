@@ -1,0 +1,54 @@
+@mixin flex-layout {
+  display: flex;
+
+  // Flex Direction
+  &[data-option-orientation="vertical"] {
+    flex-direction: column;
+  }
+
+  &[data-option-orientation="horizontal"] {
+    flex-direction: row;
+  }
+
+  // Align Items
+  &[data-option-align-items="center"] {
+    align-items: center;
+  }
+
+  &[data-option-align-items="flex-end"] {
+    align-items: flex-end;
+  }
+
+  &[data-option-align-items="flex-start"] {
+    align-items: flex-start;
+  }
+
+  // Justify Content
+  &[data-option-justify-content="center"] {
+    justify-content: center;
+  }
+
+  &[data-option-justify-content="flex-end"] {
+    justify-content: flex-end;
+  }
+
+  &[data-option-justify-content="flex-start"] {
+    justify-content: flex-start;
+  }
+}
+
+.list { 
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+
+  @include flex-layout;
+
+  > li {
+    position: relative;
+
+    @include flex-layout;
+  }
+}

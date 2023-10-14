@@ -1,0 +1,24 @@
+.container {
+  position: relative;
+  width: 100%;
+
+  > div{
+    position: relative;
+    margin: auto;
+
+    @media only screen and (min-width:992px) {
+      max-width: 960px;
+    }
+  
+    @media only screen and (min-width:1200px) {
+      max-width: 1140px;
+    }
+  
+    @media only screen and (min-width:1400px) {
+      max-width: 1380px;
+    }
+
+    
+  }
+
+}
