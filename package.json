@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "date-fns": "^2.30.0",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18"
@@ -20,6 +21,8 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "eslint-plugin-react": "^7.33.2",
@@ -27,6 +30,7 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-sort-destructure-keys": "^1.5.0",
     "eslint-plugin-sort-keys": "^2.3.5",
+    "eslint-plugin-typescript-sort-keys": "^3.0.0",
     "husky": "^8.0.0",
     "sass": "^1.69.2",
     "typescript": "^5"
