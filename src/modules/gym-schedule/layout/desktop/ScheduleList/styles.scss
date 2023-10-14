@@ -1,0 +1,26 @@
+.schedule-desktop-list {
+  margin: 32px auto;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: sticky;
+    top: 190px;
+    z-index: 999;
+    background: var(--background);
+    padding: 16px 0;
+  }
+
+  &__day-list{
+    display: grid;
+
+    &-item {
+      border-radius: 8px;
+
+      &[data-option-active="true"] {
+        background-color: var(--border);
+      }
+    }
+  }
+}
