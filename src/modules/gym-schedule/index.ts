@@ -1,1 +1,1 @@
-export { default } from "./GymScheduleModules";
+export { default } from "./Lazy";
